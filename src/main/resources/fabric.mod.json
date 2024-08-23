@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorial-mod",
+	"version": "${version}",
+	"name": "Tutorial mod",
+	"description": "test pour voir si j'ai un cerveau",
+	"authors": [
+		"Yasuro, Kemmi"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/tutorial-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.yasuro.tutorialmod.TutorialMod"
+		],
+		"fabric-datagen": [
+			"net.yasuro.tutorialmod.TutorialModDataGenerator"
+		],
+		"client": [
+			"net.yasuro.tutorialmod.Tutorialmodclient"
+		]
+	},
+	"mixins": [
+		"tutorial-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
